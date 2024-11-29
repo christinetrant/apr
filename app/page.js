@@ -68,10 +68,10 @@ export default function Home() {
                 // icons={icons}
             />
             <Content
-                title="Our Services include"
+                title="What sets us apart?"
                 contentArray={[
                     {type: "list", content: serviceList},
-                    {type: "header", content: "What sets us apart?"},
+                    // {type: "header", content: ""},
                     {
                         type: "paragraph",
                         content:

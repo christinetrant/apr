@@ -30,7 +30,7 @@ const Cards = ({items}) => {
                                 <p className="text-sm text-gray-600 mb-4">
                                     {item.role}
                                 </p>
-                                <p className="text-gray-700">{item.content}</p>
+                                {/* <p className="text-gray-700">{item.content}</p> */}
                             </div>
                         </div>
                     ))}

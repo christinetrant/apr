@@ -38,7 +38,7 @@ export default function About() {
                 ]}
             />
             <ContentImage
-                name="Jason Boland"
+                title="Jason Boland"
                 imgAlign="right"
                 content={[
                     "Jason Boland, the creative force behind Always Press Record, brings a unique perspective to production, shaped by his experience as a musician, producer, director, and technical visionary. As a member of Kodaline, he has toured globally, understanding live performance and storytelling through music. His success as a producer with chart-topping hits informs his ability to create emotionally resonant projects.",

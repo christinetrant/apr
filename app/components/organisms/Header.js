@@ -1,10 +1,22 @@
-import React from "react";
+"use client";
+import React, {useState} from "react";
 import Nav from "./Nav";
 import {EnvelopeIcon, PhoneIcon} from "@heroicons/react/24/outline";
+import Link from "next/link";
 
 const Header = () => {
+    const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+    const toggleMenu = () => {
+        setIsMenuOpen(!isMenuOpen);
+    };
+
+    const closeMenu = () => {
+        setIsMenuOpen(false);
+    };
+
     return (
-        <header className="bg-white">
+        <header className="bg-white relative">
             <div className="mx-auto flex h-16 max-w-screen-xl items-center gap-8 px-4 sm:px-6 lg:px-8">
                 <a className="block text-teal-600" href="#">
                     <span className="sr-only">Home</span>
@@ -60,7 +72,10 @@ const Header = () => {
                             </a>
                         </div>
 
-                        <button className="block rounded bg-gray-100 p-2.5 text-gray-600 transition hover:text-gray-600/75 md:hidden">
+                        <button
+                            className="block rounded bg-gray-100 p-2.5 text-gray-600 transition hover:text-gray-600/75 md:hidden"
+                            onClick={toggleMenu}
+                        >
                             <span className="sr-only">Toggle menu</span>
                             <svg
                                 xmlns="http://www.w3.org/2000/svg"
@@ -80,6 +95,48 @@ const Header = () => {
                     </div>
                 </div>
             </div>
+
+            {isMenuOpen && (
+                <div className="mobile-menu md:hidden absolute top-16 left-0 right-0 bg-white shadow-lg z-50">
+                    <div className="flex flex-col p-4">
+                        <Link
+                            href="/"
+                            className="py-2 text-gray-700 hover:bg-gray-100"
+                            onClick={closeMenu}
+                        >
+                            Home
+                        </Link>
+                        <Link
+                            href="/about"
+                            className="py-2 text-gray-700 hover:bg-gray-100"
+                            onClick={closeMenu}
+                        >
+                            About
+                        </Link>
+                        <Link
+                            href="/equipment"
+                            className="py-2 text-gray-700 hover:bg-gray-100"
+                            onClick={closeMenu}
+                        >
+                            Equipment
+                        </Link>
+                        <Link
+                            href="/studio"
+                            className="py-2 text-gray-700 hover:bg-gray-100"
+                            onClick={closeMenu}
+                        >
+                            Studio
+                        </Link>
+                        <Link
+                            href="/contact"
+                            className="py-2 text-gray-700 hover:bg-gray-100"
+                            onClick={closeMenu}
+                        >
+                            Contact
+                        </Link>
+                    </div>
+                </div>
+            )}
         </header>
     );
 };

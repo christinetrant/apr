@@ -1,3 +1,5 @@
+import Form from "../components/organisms/Form";
+
 export default function Contact() {
-    return <h1>Contact Page</h1>;
+    return <Form />;
 }

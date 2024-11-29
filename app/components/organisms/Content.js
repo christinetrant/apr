@@ -1,6 +1,4 @@
 import React from "react";
-import List from "./CardList";
-import FtSection from "./FtSection";
 import ListItem from "../molecules/ListItem";
 
 const Content = ({subtitle, title, contentArray}) => {

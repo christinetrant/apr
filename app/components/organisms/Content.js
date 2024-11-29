@@ -80,7 +80,6 @@ const Content = ({subtitle, title, contentArray}) => {
                                 {/* lg:max-w-none lg:grid-cols-2 lg:gap-y-16 */}
                                 <dl className="grid max-w-xl grid-cols-1 gap-x-8 gap-y-10">
                                     {item.content.map((item, index) => {
-                                        console.log({item});
                                         return (
                                             <ListItem key={index} item={item} />
                                         );
